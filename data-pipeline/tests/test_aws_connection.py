@@ -26,14 +26,15 @@ def test_aws_connection():
 
         # List your buckets
         buckets =  s3.list_buckets()
-        print(f"Connected! You have {len(buckets["Buckets"])} S3 buckets")
+        # print("Buckets:", buckets)
+        print(f"Connected! You have {len(buckets['Buckets'])} S3 buckets")
 
 
         return True
     
     except Exception as e:
         print(f"Connection Failed: {e}")
-        print("Check you .env file and aws credentials")
+        print("Check you .env file and AWS credentials")
         return False
     
 if __name__ == "__main__":

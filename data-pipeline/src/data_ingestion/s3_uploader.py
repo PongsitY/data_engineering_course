@@ -123,7 +123,7 @@ def verify_upload():
         for file in files:
             size_mb = file['Size'] / (1024*1024)
             total_size_mb +=size_mb
-            print(f" {file["Key"]} ({size_mb:.2f} MB)")
+            print(f" {file['Key']} ({size_mb:.2f} MB)")
 
         print(f"Total data size: {total_size_mb: .2f} MB")
         print("Upload verification complete!")
